@@ -1,0 +1,207 @@
+@import 'variables.scss';
+body{
+    color: $fontColor;
+}
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active{
+    color: $fontColor;
+}
+.banner .header-row{
+    background-repeat: no-repeat;
+    height:100%;
+}
+.common-page-head{
+    background: $page-head-color;
+    color: $white;
+}
+.common-banner-head{
+    color: $fontColorSecond;
+}
+.common-page-subhead{
+    background:$page-sub-head-color;
+}
+.common-footer-color{
+    background:$footer-bg-color;
+    color: $white;
+    @include my-padding-mixin(80px 0)
+}
+.svg-inline--fa{
+    vertical-align: baseline
+}
+.field.error input{
+    border:1px solid $error-border-color;
+    background: $error-background-color;
+}
+.border-bottom-black{
+    border-bottom: 1px solid $fontColor;
+}
+.banner h3, #SignInModal h3{
+    @include font-weight(normal)
+}
+.btnNosign{
+    background: $footer-bg-color;
+    @include border(1px,solid, $white);
+    color:$white;
+}
+.btnNosign:hover{
+    @include btn-hover($bgColorPrimary,$white)
+}
+#SignInModal .modal-content{
+    @include my-padding-mixin(0 10px)
+}
+.grey{
+    color: $faded-color;
+}
+.blue{
+    color:$bgColorPrimary;
+}
+#leap .imageContainer{
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.card{
+    box-shadow: 1px 4px 7px 2px rgba(0,0,0,0.25);
+}
+.common-card-info{
+    background: $card-bg-color;
+}
+.imageContainer img{
+    width: 100%;
+}
+.common-card-info.active{
+    background: $bgColorPrimary;
+    color: $white;
+}
+.common-card-info.active h3{
+    color: $white;
+}
+.common-border-bottom{
+    border-bottom: 1px solid $white;
+}
+.common-card{
+    @include my-padding-mixin(20px 0)
+}
+.common-card-info{
+    @include my-padding-mixin(15px)
+}
+.no-padd{
+    @include my-padding-mixin(0)
+}
+.tabView .tab-content img{
+    width: 100%;
+}
+.tabView .tab-content div{
+    @include my-padding-mixin(20px 0)
+}
+// Small screens
+@media only screen { 
+    
+    body{font-size: 10px;}
+    .navbar-nav li a{
+        border-left: none;
+    }
+    .common-page-head, .common-page-subhead{
+        @include my-padding-mixin(20px 0)
+    }
+    p{
+        font-size: 15px;
+    }
+    .common-div .container{
+        @include my-padding-mixin(10px 0)
+    }
+} /* Define mobile styles */
+@media only screen and (max-width: 40em) {
+    // Common font size 
+    h3 {
+        font-size: 1.6em;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    footer p{
+        font-size: 10.5px;
+    }
+    a.nav-link{
+        font-size: 16.5px;
+    }
+ } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+
+// Medium screens
+@media only screen and (min-width: 40.063em) {
+    
+ } /* min-width 641px, medium screens */
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    h3 {
+        font-size: 1.6em;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    a.nav-link{
+        font-size: 16.5px;
+    }
+    .navbar-nav li a{
+        @include border(0,0,0)
+    }
+ } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
+// Large screens
+@media only screen and (min-width: 64.063em) { 
+    .navbar-nav li a{
+        @include borderLeft;
+        font-size: 15px;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link{
+        @include my-padding-mixin(1em 1.5em)
+    }
+    .common-page-head, .common-page-subhead{
+        @include my-padding-mixin(50px 0)
+    }
+    .common-div{
+        @include my-padding-mixin(100px 0)
+    }
+    a.nav-link{
+        font-size: 16.5px;
+    }
+    h3 {
+        font-size: 25.5px;
+    }
+    .common-card{
+        @include my-padding-mixin(40px 0)
+    }
+    .common-card-info{
+        @include my-padding-mixin(25px)
+    }
+    .absContainer img{
+        position: absolute;
+        bottom: -47px;
+    }
+    #leap .common-page-head.leapFooter{
+        @include my-padding-mixin(120px 0);
+        margin-top: 50px;
+    }
+    .common-page-img-fix .common-page-subhead .imageContainer img{
+        position: absolute;
+        bottom: -61px;
+    }
+    .common-page-img-fix .common-page-subhead{
+        @include my-padding-mixin(50px 0 100px 0)
+    }
+} /* min-width 1025px, large screens */
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) { } /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+
+// XLarge screens
+@media only screen and (min-width: 90.063em) { } /* min-width 1441px, xlarge screens */
+
+@media only screen and (min-width: 90.063em) and (max-width: 120em) { } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+
+// XXLarge screens
+@media only screen and (min-width: 120.063em) { } /* min-width 1921px, xxlarge screens */

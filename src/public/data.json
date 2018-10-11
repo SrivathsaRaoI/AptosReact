@@ -1,0 +1,375 @@
+{
+   "general":{
+      "logo":"./assets/images/microsoft-logo.png",
+      "name" : "ms azure cosmos db"
+   },
+   "navigation":[
+      {
+         "title":"Reimagine",
+         "chapter": "Chapter-1",
+         "link":"index.html"
+      },
+      {
+         "title":"Leap",
+         "chapter":"Chapter-2",
+         "link":"index.html"
+      },
+      {
+         "title":"Meet",
+         "chapter": "Chapter-3",
+         "link":"index.html"
+      },
+      {
+         "title":"Control",
+         "chapter": "Chapter-4",
+         "link":"index.html"
+      },
+      {
+         "title":"Deliver",
+         "chapter": "Chapter-5:",
+         "link":"index.html"
+      },
+      {
+         "title":"Azure Cosmos DB",
+         "chapter": "Chapter-6",
+         "link":"index.html"
+      },
+    {
+        "title":"Get Started",
+         "chapter": "",
+         "link":""
+    }
+   ],
+   "banner":{
+       "url":"./assets/images/bannerTop.png",
+       "data":{
+           "heading": "Build modern apps that are cool for cats",
+           "body": "Are your apps up to scratch? Improve your app experience with Azure Cosmos DB's easy-to-use consistency models that give you better control over performance and availability."
+       }
+   },
+   "reimagine":{
+    "title":"Reimagine",
+    "chapter": "Chapter-1",
+    "head": "Reimagine your platform for creating amazing global apps",
+    "textPrimary":"As a developer looking to build a modern global application, you face a whole new set of challenges when it comes to data management. In order to ensure your app delivers a fast and responsive experience without lags in service, you need a highly available database system that guarantees low latency and predictable throughput. You need a system that won’t be crushed by the size of the data and can also put data as close to your users as possible—wherever your users are.",
+    "textSecondary":"We often refer to these challenges as “horizontal scaling” (or big data) and “distribution,” which essentially boil down to questions we’ve been asking for years about how to store, access, move, and change data. The difference in a global scenario, however, is that the answer doesn’t lead to changing the existing system; it requires you to reimagine the whole system."
+    },
+    "leap":{
+        "title":"Leap",
+        "chapter": "Chapter-2",
+        "url": "./assets/images/chapter2_empty-house_image.jpg",
+        "urlDual": "./assets/images/chapter2_house-cats_image.png",
+        "head": "Leap modern app challenges and land on your feet",
+        "textPrimary":"As a developer looking to build a modern global application, you face a whole new set of challenges when it comes to data management. In order to ensure your app delivers a fast and responsive experience without lags in service, you need a highly available database system that guarantees low latency and predictable throughput. You need a system that won’t be crushed by the size of the data and can also put data as close to your users as possible—wherever your users are.",
+        "textSecondary":"We often refer to these challenges as “horizontal scaling” (or big data) and “distribution,” which essentially boil down to questions we’ve been asking for years about how to store, access, move, and change data. The difference in a global scenario, however, is that the answer doesn’t lead to changing the existing system; it requires you to reimagine the whole system.",
+        "bodyText":{
+            "basicInfo":"No amount of reverse-engineering ingenuity can scale a single physical server to run a planet-scale app. To illustrate why this is the case, imagine a business model involving the internet’s favorite animal—cats—as an app.",
+            "headerInfo":"How a global app is a little like a cat-keeping business.",
+            "workInfo":"People drop off their cats at your house when they go to work in the morning and pick them up at night.",
+            "petCompare":"Cats = Data",
+            "cageFit":"You have 20 small cages that fit a standard housecat.",
+            "cageSchema":"Small cage = Schema",
+            "ownerInfo":"You keep the cats in your living room where the cats stay all day.",
+            "petRoom":"Living room = Storage capacity."
+        },
+        "toggleVolume":{
+            "url": "./assets/images/chapter2_cat1-image.jpg",
+            "headerInfo":"As business booms, you may have...",
+            "toggleInfoPrimary":{
+                "title":"volume",
+                "headerInfo":"Too many cats show up!",
+                "bodyText":"One day, 100 people come to your home to drop off their cats. You can still only store 20, but those 20 require more time than normal to take because the other 80 cats and their owners make it harder to process incoming cats. This illustrates the problem with increased volume. You don’t have enough storage to hold all your data, and it slows down throughput of requests as a result.",
+                "extraInfo":"To address the issue, you could….",
+                "btnText":"Click for solution"
+            },
+            "toggleInfoSecondary":{
+                "title":"Scale up",
+                "headerInfo":"Add more cages.",
+                "bodyText":"Improve throughput by creating more capacity and working faster to process requests. In your cat business, you’d buy more cages and add more people to help take cats more quickly. In a database, we add more power to run the queries faster.",
+                "btnText":"Click for scenario"
+            }
+        },
+        "toggleVelocity":{
+            "url": "./src/assets/images/chapter2_cat2-image.jpg",
+            "toggleInfoPrimary":{
+                "title":"velocity",
+                "headerInfo":"The cats arrive all at once!",
+                "bodyText":"Twenty people all show up at one time to drop off their cats. They all get stuck in your door while you try to handle one cat at a time. This illustrates the problem of increased velocity. You can’t process data requests as fast as they come in, which slows down throughput.",
+                "extraInfo":"To address the issue, you could….",
+                "btnText":"Click for solution"
+            },
+            "toggleInfoSecondary":{
+                "title":"shard or scale out",
+                "headerInfo":"Open more locations.",
+                "bodyText":"Improve throughput and storage by breaking the data into unique sets. In your cat business, you could ask four of your neighbors to take 20 cats each, which would make room for a lot more cats. In a database scenario, we would add more machines and apply partitions that spread the data between them. In addition to storing more data, we increase throughput by efficiently routing requests across partitions.",
+                "btnText":"Click for scenario"
+            }
+        },
+        "toggleVariety":{
+            "url": "./src/assets/images/chapter2_cat3-image.jpg",
+            "toggleInfoPrimary":{
+                "title":"Variety",
+                "headerInfo":"Lions and tigers and….!",
+                "bodyText":"A zookeeper hears you do cats and drops off some lions and tigers. You can’t keep these guys in your living room anymore, and they won’t fit in your cages. This illustrates the problem of increased variety. You can’t use the current schema to store new data, and it’s really not the right-sized storage anyway.",
+                "extraInfo":"To address the issue, you could….",
+                "btnText":"Click for solution"
+            },
+            "toggleInfoSecondary":{
+                "title":"{relax the schema}",
+                "headerInfo":"Build a zoo.",
+                "bodyText":"Increase the types of data you accept and improve your ability to find and query it by changing how you index it. In your cat business, this would mean adding all sorts of cages, habitats, and additional facilities that allow you to keep all types of different cats. You would need to be sure to organize (index) them well, so they entered your service and left as quickly and efficiently as possible.",
+                "btnText":"Click for scenario"
+            }
+        },
+        "toggleDynamic":{
+            "url": "./src/assets/images/chapter2_cat4-image.jpg",
+            "toggleInfoPrimary":{
+                "title":"{dynamic content}",
+                "headerInfo":"Owners drop off and pick up all day!",
+                "bodyText":"You start offering by-the-hour cat storage, in which people can bring in their cats according to cage availability. You need a way to let cat owners access the cats and the cages directly to change them as required. This illustrates the challenge of shifting from static to dynamic content. It’s no longer safe to assume that the data you put in this morning is the same data now. You need to allow for others to change it and for that change to become the new data truth.",
+                "extraInfo":"To address the issue, you could….",
+                "btnText":"Click for solution"
+            },
+            "toggleInfoSecondary":{
+                "title":"{replicate locally}",
+                "headerInfo":"Clone cats nearby.",
+                "bodyText":"Improve throughput, availability, and durability by making exact copies. In your cat business, this would be strange but effective. You could clone the cats that come in and store them at your neighbors’ houses in identical living rooms, so cat owners could go to any one of the houses to drop off or pick up their cats. In a database, we make exact copies of data and let users query any of them to speed up how quickly they can access that data.",
+                "btnText":"Click for scenario"
+            }
+        },
+        "toggleGlobal":{
+            "url": "./src/assets/images/chapter2_cat5-image.jpg",
+            "toggleInfoPrimary":{
+                "title":"{global availability}",
+                "headerInfo":"Cats come from anywhere!",
+                "bodyText":"Word gets out about your business. People across the world want to keep their cats with you, all sizes and species of cats for all lengths of time. Your house is in one physical location. This illustrates the problem of global availability. Moving data (or cats) around the world, even at the speed of light, is more complicated and time consuming than moving it locally.",
+                "extraInfo":"To address the issue, you could….",
+                "btnText":"Click for solution"
+            },
+            "toggleInfoSecondary":{
+                "title":"{replicate globally}",
+                "headerInfo":"Clone cats across the world.",
+                "bodyText":"Make exact copies of sharded databases and put them around the world where local users can access them. In your cat business, this one is also a little bizarre but potentially useful: you would launch a global franchise that clones the cats so they can be dropped off anywhere and picked up anywhere else in the world. In a database, we make replicated copies available in multiple regions around the world that anyone can read and write to, and we continuously sync the data sets so they are as consistent as possible, given the limitation of the speed of light.",
+                "btnText":"Click for scenario"
+            }
+        },
+        "footerContent":{
+            "url":"./src/assets/images/chapter2_laptop-image.png",
+            "content":"If you’re setting out to build a global cat watching franchise with by-the-hour services, however, you need something special to start.  You need a globally distributed system specifically built to support modern apps that use big data and run at a global scale. Azure Cosmos DB is a multi-model data store supporting structured, unstructured, key-value, and graph data models for any type of data you need to work with."
+        }
+    },
+    "meet":{
+        "url":"./assets/images/chapter1_hero-image.jpg",
+        "urlsm":"./assets/images/meet_cat.jpg",
+        "title":"Meet",
+        "chapter": "Chapter-3",
+        "head": "Meet the globally distributed database... and its quirks",
+        "textPrimary":"A globally distributed system serves data quickly to lots of people all over the world by supplying replicated copies of data in multiple regions. Distributed databases are built to handle the challenges posed by big data in terms of data volume, velocity, variety, and durability. However, distributed systems hinge on global replication, which is limited by the speed of light, or how fast data can travel. ",
+        "textSecondary":"When you’re replicating machines sitting to next to each other, the speed of light is negligible. If you travel across the world and back, the speed of light can impact your users’ experience of your app—affecting how readily available data is to them, how accurate the data seems to be, and how responsive the app is to what they want to do. Knowingly or unknowingly, developers are making these trade-offs between the speed of data availability, data access, and data consistency.",
+        "extraInfo": "The question is: How can you better control the trade-offs your app is making to better control the experience your app users are having?",
+        "dataReplicate":{
+            "title": "Data replicates globally",
+            "content":"With data replicated around the globe and dynamic changes happening all the time, replicas can get out of sync. Bill and Sally may find that they don’t have access to the same data at the same time as geographically dispersed replicas catch up with one another.",
+            "url": "./assets/images/chapter3_chart_image.jpg"
+        }
+    },
+    "control":{
+            "url":"./assets/images/chapter4_hero-image.jpg",
+            "urlsm":"./src/assets/images/900w_chapter4_cat-hero.jpg",
+            "title":"Control",
+            "chapter": "Chapter-4",
+            "head": "Control trade-offs with consistency models",
+            "textPrimary":"Many distributed database systems today offer one of two ways to handle the data consistency issues that arise from replication.",
+            "textContent":"You can make users wait until each new write has been durably committed across a quorum of replicas across the globe before acknowledging the write. Likewise, users must read across a quorum of global replicas to get the read value. This model guarantees <strong>strong</strong>  data consistency and ensures users all read the same value. However, it increases the latency of each request and decreases the overall throughput available.",
+            "textSecondary":"If you are less concerned about users pulling the most recent values and instead want to increase app availability and performance, you can acknowledge the write as soon as it’s replicated among a quorum of local copies and let users read whatever data they can from their closest replica. This model guarantees <strong>eventual</strong> data consistency (as in it will “eventually” be consistent).",
+            "textSecondarySub":"The truth, though, is that there are other options between these two extremes, which you can use to better control the experience your audience has with your app. Before we discuss these options, let’s explore the mechanisms behind them.",                                                                                                                                      
+            "tabData":{
+                "tabOne":{
+                    "head":"Strong Data Consistency",
+                    "url":"./assets/images/chapter4_tab1_image.jpg"
+                },
+                "tabTwo":{
+                    "head":"Eventual Data Consistency",
+                    "url":"./assets/images/chapter4_tab2_image.jpg"
+                }
+            }
+            },
+    "deliver":{
+                "url":"./assets/images/chapter5_hero-image.jpg",
+                "urlsm":"./assets/images/900w_chapter5_cat-hero.jpg",
+                "title":"Deliver",
+                "chapter": "Chapter-5",
+                "head": "Deliver the app experience your users want",
+                "textPrimary":"Imagine being able to choose your own set of rules for achieving data consistency—which boils down to saying when, how, and in what order reads and writes are replicated across regions and copies. You could create an experience for your app users that better meets their expectations and improves their overall satisfaction with your app.",
+                "textContent":"Many computer science researchers have studied, debated, and tested these ideas in academia. The guiding principles they have come up with are the CAP theorem and its extension, the PACELC theorem. ",
+                "textSecondary":"In a nutshell, these theorems mean there’s a give and take between data consistency, data availability, throughput, and latency in a distributed system, which directly affects your app user’s experience. Many developers assume they can only have it one of two ways—offer either strong consistency and poor availability or poor consistency and high availability—because that’s all that’s traditionally been available in the market.",
+                "textSecondarySub":"Over the past three decades, however, computer science researchers have proposed more than 50 models, or sets of rules, that make calculated trade-offs between latency, throughput, availability, and consistency. These fall in a wide spectrum between the limitations of eventual and strong consistency models. None of the proposed models are available as turnkey solutions in the market.",                                                                                                                                      
+                "capData":{
+                    "url":"./assets/images/chapter5_chart_image.png",
+                    "contentPrimary":"In a nutshell, these theorems mean there’s a give and take between data consistency, data availability, throughput, and latency in a distributed system, which directly affects your app user’s experience. Many developers assume they can only have it one of two ways—offer either strong consistency and poor availability or poor consistency and high availability—because that’s all that’s traditionally been available in the market.",
+                    "contentSecondary":"Over the past three decades, however, computer science researchers have proposed more than 50 models, or sets of rules, that make calculated trade-offs between latency, throughput, availability, and consistency. These fall in a wide spectrum between the limitations of eventual and strong consistency models. None of the proposed models are available as turnkey solutions in the market."
+                }
+                },
+    "cosmos":{
+                "url":"./assets/images/chapter6_hero-image.jpg",
+                "urlsm":"./src/assets/images/900w_chapter5_cat-hero.jpg",
+                "title":"Azure Cosmos DB",
+                "chapter": "Chapter-6",
+                "head": "Azure Cosmos DB offers well-defined consistency models for out-of-this-world control",
+                "textPrimary":"The ability to control your app experience by changing the consistency model has been nearly unheard of until now. ",
+                "textContent":"Azure Cosmos DB is the first and only globally distributed database service that offers five well-defined and preconfigured consistency models to help you navigate the trade-offs between data consistency and app availability.",
+                "textSecondary":"Engineers at Microsoft thoroughly vetted and tested the models proposed from academia in order to identify those they felt were the most practical, useful, and robust. They identified three that best met the needs of the developer community, which are available in Azure Cosmos DB, alongside <strong>strong</strong> and <strong>eventual</strong> models, as turnkey configurations.",
+                "appData":{
+                   "url":"./assets/images/chapter5_chart_image.png",
+                   "title":"Preconfigured choices to help you build a better app experience",
+                    "content":"Azure Cosmos DB distills decades of research to make five well-defined consistency models available to you as preconfigured choices, backed by enterprise-grade SLAs*.",
+                    "navData":[
+                        {
+                            "content":{
+                                "title":"Strong",
+                                "link":"Strong",
+                                "head":"Getting whatever you can, whenever you can, as fast as you can",
+                                "url":"./assets/images/chapter6_cat1_image.png",
+                                "content":{
+                                    "infoPrimary":"The strong model favors data consistency above all else and preserves the order in which data is written. It guarantees your app users will see all previous writes. When you choose the strong model, you ask your app users to wait until all data writes have been fully written to the master and made durably available. Your app users get an error message if their request comes before the data is ready. The strong model is great if you need your app users to read the absolute truth every time.",
+                                    "listData":[
+                                        {
+                                            "title":"<strong>Banking accounts</strong>",
+                                            "content":"need to reflect the order of transactions and provide an accurate balance, so team members in different offices don’t pay the same bill twice."
+                                        },
+                                        {
+                                            "title":"<strong>Payment processing</strong>",
+                                            "content":"for online orders needs to occur in the correct order, especially to avoid charging customers for the same order more than once."
+                                        },
+                                        {
+                                            "title":"<strong>Reservation systems</strong>",
+                                            "content":"must show correct availability when customers finalize their booking."
+                                        }
+                                    ]
+                                }
+                            }
+                         },
+                         {
+                            "content":{
+                                "title":"Bounded-staleness",
+                                "link":"Bounded",
+                                "head":"Fetching data that’s not “too old” to boost performance",
+                                "url":"./assets/images/chapter6_cat2_image.png",
+                                "content":{
+                                    "infoPrimary":"The bounded-staleness model ensures relatively accurate data in a more reasonable time frame than the strong model. When you choose the bounded-staleness model, you are saying it’s okay for apps to fetch old data from local replicas, provided it’s not more than x versions older than a primary or peer. The bounded-staleness model is great for apps that can afford to have a little lag time in favor of data consistency.",
+                                    "listData":[
+                                        {
+                                            "title":"<strong>Flight status apps</strong>",
+                                            "content":" provide flight arrival time estimations using GPS data collected from planes as they fly. The GPS data doesn’t have to be the most up to date to provide a reasonable estimation. It’s more important that users get information when they need it. "
+                                        },
+                                        {
+                                            "title":"<strong>Package tracking apps</strong>",
+                                            "content":"for a shipping company need to provide chronologically ordered records and checkpoints that show where and when a package was received."
+                                        }
+                                    ]
+                                }
+                            }
+                         },
+                         {
+                            
+                            "content":{
+                                "title":"Session",
+                                "link":"Session",
+                                "head":"Putting the individual app user’s experience front and center",
+                                "url":"./assets/images/chapter6_cat3_image.png",
+                                "content":{
+                                    "infoPrimary":"The session model prioritizes the user’s interaction by guaranteeing highly available and consistent data throughout that particular session. Session consistency provides predictable read-your-own-write consistency for a given session with maximum read throughput, while preserving low latency writes and reads. Consistency within a given session is strong, while consistency outside the given session is eventual. The session model is great for apps that require logical and real-time experiences for the user.",
+                                    "listData":[
+                                        {
+                                            "title":"<strong>Profile updates</strong>",
+                                            "content":" your user writes to her account must be immediately available for her to read, whereas it’s less important for her to read profile updates that other users are writing simultaneously."
+                                        },
+                                        {
+                                            "title":"<strong>Retail shopping carts</strong>",
+                                            "content":"need to stay consistent within a shopper’s session as she navigates between product pages."
+                                        },
+                                        {
+                                            "title":"<strong>Social music apps</strong>",
+                                            "content":" such as Spotify need to be consistent with users’ playlists preferences as they are building them, but the preferences don’t have to show up right away for everyone else who is “following.”"
+                                        }
+                                    ]
+                                }
+                            }
+                         },
+                         {
+                            "content":{
+                                "title":"Consistent prefix",
+                                "link":"Consistent",
+                                "head":"Preserving the order of data writes without too much concern for how old they are",
+                                "url":"./assets/images/chapter6_cat4_image.png",
+                                "content":{
+                                    "infoPrimary":"The consistent prefix model favors performance and availability without sacrificing the sequence of events by fetching old data fast. When you choose the consistent prefix model, you’re saying it’s okay to give your app users old data as long as the data read observes the actual sequence of writes. This differs from the eventual model in that it reflects the order of writes as they occurred. The consistent prefix model is great for apps in which the order of the data tells as much of a story as the end result.",
+                                    "listData":[
+                                        {
+                                            "title":"<strong>Baseball score updates</strong>",
+                                            "content":" running at the bottom of ESPN must appear in the order that they occurred during the game at the expense of being up-to-the-minute accurate."
+                                        },
+                                        {
+                                            "title":"<strong>Social media comments</strong>",
+                                            "content":" must be ordered to preserve the back-and-forth nature of dialogue and make sense to people reading them, but the reads do not need to be fully up to date. As a result, the cost of read operations (in terms of system resources) are lower than session, bounded-staleness and strong. "
+                                        }
+                                    ]
+                                }
+                            }
+                         },
+                         {
+                            "content":{
+                                "title":"Eventual",
+                                "link":"Eventual",
+                                "head":"Getting whatever you can, whenever you can, as fast as you can",
+                                "url":"./assets/images/chapter6_cat5_image.png",
+                                "content":{
+                                    "infoPrimary":"The eventual model favors app performance above data consistency or write order.&nbsp;<br> When you choose the eventual model, you’re saying it doesn’t matter in what order data is read, as long as something is available. Data that fetches under the eventual model offers the lowest latency for both reads and writes, but it also provides the weakest consistency.<br> The eventual model is great for apps that live and die according to their availability.",
+                                    "listData":[
+                                        {
+                                            "title":"<strong>Product reviews</strong>",
+                                            "content":" have to be available for customers to reach when they want them, but it’s not crucial that the reviews always include the latest ratings or preserve the order of the ratings."
+                                        },
+                                        {
+                                            "title":"<strong>Social media wall posts</strong>",
+                                            "content":" (not the comments to a post, but the initial post itself) just need to show up eventually. Users care more about seeing activity when they’re on the site than they care about seeing the order of the activity. It’s okay if, later on, the posts reorder or repopulate in their feed, as long as there’s something new to see now. "
+                                        },
+                                        {
+                                            "title":"<strong>Transaction receipts</strong>",
+                                            "content":" don’t necessarily need to be available immediately after purchase, as long as they show up within a reasonable window of time."
+                                        }
+                                    ]
+                                }
+                            }
+                         }
+                    ],
+                    "footer":{
+                        "url":"./assets/images/chapter6_slide1_image.jpg",
+                        "range":[
+                            {
+                                "info":"Higher"
+                            },
+                            {
+                                "info":"Lower"
+                            }
+                        ],
+                        "noteData":"*Azure Cosmos DB is the only service with financially backed SLAs for millisecond latency at the 99th percentile, 99.99% HA, and guaranteed throughput and consistency."
+                    }
+                }
+            },
+    "footer":{
+        "NoSign":{
+            "head": "Keep reading",
+            "info":"Learn more about creating modern apps built upon globally distributed, multi-model data, and how Microsoft can help you find the right solution for your database needs.",
+            "ButtonText": "Unlock the ebook"
+        }
+    },
+    "signinmodal":{
+        "headerInfo":"Learn more about creating modern apps built upon globally distributed, multi-model cats data, and how Microsoft can help you find the right solution for your database needs.",
+        "footerInfo":"Microsoft may use your contact information to provide updates and special offers about  and other Microsoft products and services.  You can unsubscribe at any time. To learn more you can read the ",
+        "link":{
+            "text":"privacy statement.",
+            "url":"http://go.microsoft.com/fwlink/?LinkId=521839"
+        }
+    }
+}

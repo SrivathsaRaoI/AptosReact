@@ -1,0 +1,38 @@
+
+// Common Colors
+$fontColor:#1a1a1a;
+$white: #fff;
+$fontColorSecond: rgb(0, 120, 212);
+$bgColorPrimary: #0078d7;
+$card-bg-color: #dedede;
+$footer-bg-color:#505050;
+$page-sub-head-color: rgb(222, 222, 222);
+$page-head-color: rgb(0, 120, 215);
+$faded-color: #777779;
+$error-border-color: rgb(255, 0, 0);
+$error-background-color: rgb(255, 234, 234);
+// Common mixin
+
+@mixin borderLeft {
+    border-left: 1px solid $fontColor;
+}
+
+// padding mixin
+
+@mixin my-padding-mixin($some-number) {
+    padding: $some-number;
+  }
+
+@mixin border( $width, $style, $color) {
+    border: $width $style $color;
+}
+@mixin  btn-hover($color,$bg){
+    color:$color;
+    background: $bg;
+}
+
+//Font Weight mixin
+
+@mixin font-weight($weight){
+    font-weight: $weight;
+}
