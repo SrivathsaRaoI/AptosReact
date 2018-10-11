@@ -96,7 +96,7 @@ class Header extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  return { apiServiceReducer: state.apiServiceReducer };
+  return { loginReducer: state.loginReducer };
 };
 
 export default connect(mapStateToProps)(Header);

@@ -1,8 +1,8 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
-import apiServiceReducer from './reducers/apiServiceReducer'
+import loginReducer from './reducers/loginReducer'
 import thunk from 'redux-thunk'
 const reducer = combineReducers({
-    apiServiceReducer
+    loginReducer
 })
 const store = createStore(
  reducer,
