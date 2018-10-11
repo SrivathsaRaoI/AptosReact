@@ -7,7 +7,7 @@ class Header extends React.Component {
     super();
   }
  render () {
-   const data = this.props.apiServiceReducer.data;
+   const data = this.props.loginReducer.data;
    const signed = this.props.signed;
    var navigation = (data.navigation)?data.navigation:[];
    var logo = (data.general)?data.general:{};
