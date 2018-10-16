@@ -1,2 +1,17 @@
+.login-form{
+    margin-top: 10%;
+    margin-left: 35%;
+    margin-right: 65%;
+    width: 50%;
+    align: center;
+    max-width: 500px;
+}
 
+.form-style{
+    padding: 10px 10px;
+}
+.loginLogo{
+    margin-left: 40%;
+    border-radius: 50%;
+}
     

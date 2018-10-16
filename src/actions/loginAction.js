@@ -1,20 +1,33 @@
-import { LOGIN } from '../types';
+import { LOGIN,LOGINLOADING,LOGINERROR } from '../types';
 import axios from 'axios';
-const baseURL= 'http://localhost:3000/data.json'
+import {baseURL} from '../baseConfig';
 
-export const loginAction = () => {
+export const loginAction = (userName,password) => {
   return dispatch => {
-    axios.get(baseURL)
-      .then((response)=> {
+   
+      dispatch({
+          type: LOGINLOADING
+        }) 
+      axios.post(baseURL+"/authenticate", 
+      { username: userName,
+        password: password
+      }
+      ).then( (response)=> {
         dispatch({
           type: LOGIN,
           payload: {
             response
           }
         })
-      })
-      .catch((error)=> {
-        console.log(error);
+            
+      }).catch((error)=> {
+          dispatch({
+          type: LOGINERROR,
+          payload: {
+            error
+          }
+        }) 
+          
       });
     
   }
