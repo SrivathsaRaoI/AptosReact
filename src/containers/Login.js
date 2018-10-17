@@ -31,56 +31,58 @@ class App extends Component{
           this.setState({username:event.target.value})
       }
   }
-  componentWillReceiveProps(preProps,postProps){
-    if(!Object.is(preProps.loginReducer,postProps.loginReducer)){
-      console.log("shashank",postProps.loginReducer)
+  componentWillReceiveProps(postProps){
+    if(!Object.is(postProps.loginReducer,this.props.loginReducer)){
+      console.log("shashank",postProps.loginReducer,this.props.loginReducer)
+      var responseData = postProps.loginReducer.data.data;
+      if(postProps.loginReducer.data.Error){
+        notification.open({
+              message: '',
+              description: "Unable to connect !!!",
+          });
+      }
+      if(postProps.loginReducer.data.Loading){
+            this.setState({loading:true})
+      }
+      else{
+        
+            this.setState({loading:false})
+      }
+        if(responseData.status ==1){
+            if(responseData.error){
+            notification.open({
+                message: 'alert',
+                description: 'Wrong user name or password',
+            });
+            }
+        }
+        if(responseData.status == 0){
+            if(responseData.result.status = 1){
+                sessionStorage.setItem("username", this.state.username);
+                sessionStorage.setItem("user_id", responseData.result.user_id);
+                 notification.open({
+                message: '',
+                description: "success",
+            });
+                //this.props.history.push({pathname: '/home',state: { username: this.state.username,user_id:responseData.result.user_id }})
+            }
+            else{
+                notification.open({
+                message: '',
+                description: "user don't have access",
+            });
+            }
+            
+        }
+
     }
   }
   submit(event) {
         event.preventDefault();
         if( this.validator.allValid() ){
             var self = this;
-            this.setState({loading:true})
             this.props.loginAction(this.state.username,this.state.password);
-           /* axios.post(baseURL+"/authenticate", 
-                        { username: this.state.username,
-                          password: this.state.password
-                        }
-                       ).then( (response)=> {
-                                this.setState({loading:false})
-                                console.log(response.data);
-                                var responseData = response.data;
-                                if(responseData.status ==1){
-                                    if(responseData.error){
-                                    notification.open({
-                                        message: 'alert',
-                                        description: 'Wrong user name or password',
-                                    });
-                                   }
-                                }
-                                if(responseData.status == 0){
-                                    if(responseData.result.status = 1){
-                                        sessionStorage.setItem("username", this.state.username);
-                                        sessionStorage.setItem("user_id", responseData.result.user_id);
-                                        this.props.history.push({pathname: '/home',state: { username: this.state.username,user_id:responseData.result.user_id }})
-                                    }
-                                    else{
-                                        notification.open({
-                                        message: '',
-                                        description: "user don't have access",
-                                    });
-                                    }
-                                    
-                                }
-                        }).catch((error)=> {
-                            console.log(error);
-                            this.setState({loading:false})
-                            notification.open({
-                                        message: '',
-                                        description: "Unable to connect !!!",
-                                    });
-                            
-                        });*/
+       
                         
           
         } else {

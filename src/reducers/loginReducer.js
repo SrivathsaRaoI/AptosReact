@@ -1,7 +1,12 @@
 import { LOGIN,LOGINLOADING,LOGINERROR } from '../types';
-const initState = {
+const initState = {data:{
+         data: {},
+         Loading:false,
+         Error:false                    
+    }
 }
 export default (state = initState, action) => {
+    console.log("srivathsa",action);
 switch(action.type) {
     case LOGINLOADING :
  return {...state, 
@@ -14,7 +19,7 @@ switch(action.type) {
  case LOGIN :
  return {...state, 
      data:{
-         data: action.payload,
+         data: action.payload.response.data,
          Loading:false,
          Error:false                    
     }
