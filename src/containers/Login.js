@@ -6,8 +6,6 @@ import CardContent from '@material-ui/core/CardContent';
 import SimpleReactValidator from 'simple-react-validator';
 import { Button, notification } from 'antd';
 import {loginAction} from '../actions/loginAction';
-import 'antd/dist/antd.css';
-import '../assets/styles/App.css';
 
 
 
@@ -33,7 +31,6 @@ class App extends Component{
   }
   componentWillReceiveProps(postProps){
     if(!Object.is(postProps.loginReducer,this.props.loginReducer)){
-      console.log("shashank",postProps.loginReducer,this.props.loginReducer)
       var responseData = postProps.loginReducer.data.data;
       if(postProps.loginReducer.data.Error){
         notification.open({
@@ -64,7 +61,7 @@ class App extends Component{
                 message: '',
                 description: "success",
             });
-                //this.props.history.push({pathname: '/home',state: { username: this.state.username,user_id:responseData.result.user_id }})
+                this.props.history.push({pathname: '/home',state: { username: this.state.username,user_id:responseData.result.user_id }})
             }
             else{
                 notification.open({
