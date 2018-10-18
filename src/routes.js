@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import Login from './containers/Login';
 import MainLayout from './containers/MainLayout';
 import Home from './containers/Home';
@@ -9,13 +9,13 @@ import './assets/styles/App.css';
 
 export default () => {
  return (
-   <BrowserRouter>
+   <HashRouter>
    <Switch>
    <Route exact path='/' component={Login}/>
    <Route component={MainLayout}>
      <Route path="/home" component={Home} />
    </Route>  
    </Switch>
-   </BrowserRouter>
+   </HashRouter>
  )
 }
