@@ -4,11 +4,9 @@ import {baseURL} from '../baseConfig';
 
 export const homeAction = (userId) => {
   return dispatch => {
-   
       dispatch({
           type: HOMELOADING
-        }) 
-
+        })   
     axios.post(baseURL+"/find", 
                 { user_id: userId }
                 ).then( (response)=> {

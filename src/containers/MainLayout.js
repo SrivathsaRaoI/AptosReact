@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Layout, Menu, Icon } from 'antd';
 import {connect} from 'react-redux';
+import {withRouter} from "react-router-dom";
 
 const { Header, Footer, Sider } = Layout;
 
@@ -13,13 +14,6 @@ class MainLayout extends Component{
     this.onCollapse = this.onCollapse.bind(this);
     this.toLogout = this.toLogout.bind(this);
   }
-  onCollapse(collapsed){
-    console.log(collapsed);
-    this.setState({ collapsed });
-  }
-  toLogout(){
-      sessionStorage.removeItem("username"); this.props.history.push('/')
-  }
   componentWillMount(){
     let username = sessionStorage.getItem("username");
     if(!username){
@@ -27,6 +21,15 @@ class MainLayout extends Component{
     }
 
     }
+  onCollapse(collapsed){
+    console.log(collapsed);
+    this.setState({ collapsed });
+  }
+  toLogout(){
+      sessionStorage.removeItem("username"); 
+      this.props.history.push('/')
+  }
+  
   render(){
     return(
       <Layout style={{ minHeight: '100vh' }}>
@@ -68,4 +71,4 @@ const mapStateToProps = (state) => {
   return { loginReducer: state.loginReducer };
 };
 
-export default connect(mapStateToProps)(MainLayout);
+export default connect(mapStateToProps)(withRouter(MainLayout));

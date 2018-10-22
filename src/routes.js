@@ -9,12 +9,12 @@ import './assets/styles/App.css';
 
 export default () => {
  return (
-   <HashRouter>
+   <HashRouter  key={Math.random()}>
    <Switch>
    <Route exact path='/' component={Login}/>
-   <Route component={MainLayout}>
+   <MainLayout>
      <Route path="/home" component={Home} />
-   </Route>  
+   </MainLayout>  
    </Switch>
    </HashRouter>
  )

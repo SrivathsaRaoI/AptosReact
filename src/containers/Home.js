@@ -48,6 +48,7 @@ class Home extends Component{
             isLoding:false
         }
   }
+  
   onCollapse(collapsed){
     console.log(collapsed);
     this.setState({ collapsed });
@@ -55,7 +56,8 @@ class Home extends Component{
 
    componentWillReceiveProps(postProps){
     if(!Object.is(postProps.homeReducer,this.props.homeReducer)){
-      var responseData = postProps.homeReducer.data.data;
+      var responseData = postProps.homeReducer.data.data.result;
+      this.setState({data: responseData});
       if(postProps.homeReducer.data.Loading){
             this.setState({isLoding:true})
       }
@@ -75,7 +77,6 @@ class Home extends Component{
     componentDidMount(){
       let user_id = this.props.location && this.props.location.state && this.props.location.state && 0;
       this.props.homeAction(user_id);
-      alert();
     }
 
   render(){

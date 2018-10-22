@@ -6,7 +6,6 @@ const initState = {data:{
     }
 }
 export default (state = initState, action) => {
-    console.log("srivathsa",action);
 switch(action.type) {
     case LOGINLOADING :
  return {...state, 
