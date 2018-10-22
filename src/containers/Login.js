@@ -55,10 +55,6 @@ class App extends Component{
             if(responseData.result.status = 1){
                 sessionStorage.setItem("username", this.state.username);
                 sessionStorage.setItem("user_id", responseData.result.user_id);
-                 notification.open({
-                message: '',
-                description: "success",
-            });
                 this.props.history.push({pathname: '/home',state: { username: this.state.username,user_id:responseData.result.user_id }})
             }
             else{
