@@ -1,11 +1,9 @@
 import React, { Component} from "react";
 import {connect} from 'react-redux';
-//import Header from '../components/Header';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
 import SimpleReactValidator from 'simple-react-validator';
 import { Button, notification } from 'antd';
 import {loginAction} from '../actions/loginAction';
+import { Card } from 'antd';
 
 
 
@@ -92,7 +90,6 @@ class App extends Component{
       <div>
                 
         <Card className="login-form">
-         <CardContent>
              <img className ="loginLogo" src="assets/images/aptos.jpg" alt="Smiley face" height="100" width="100"/>
           <form className="form-style">
                 <div className="form-group">
@@ -113,7 +110,6 @@ class App extends Component{
         </Button>
                 
           </form>
-          </CardContent>
         </Card>
         </div>
     );
